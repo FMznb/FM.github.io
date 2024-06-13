@@ -1,67 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <title>图形打印</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的作业</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    .homework-item {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .homework-item h2 {
+      margin-top: 0;
+    }
+    .homework-item p {
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
-<!--219970706 付洺-->
-<script>
-    function drawTriangle(row) {
-        document.write("<h2>三角形</h2>");
-        for (let i = 1; i <= row; i++) {
-            for (let a = row; a > i; a--) {
-                document.write("&nbsp;");
-            }
-            for (let j = 1; j <= i * 2 - 1; j++) {
-                document.write("*");
-            }
-            document.write("<br>");
-        }
-    }
-
-    function drawParallelogram(row) {
-        document.write("<h2>平行四边形</h2>");
-        for (let i = 1; i <= row; i++) {
-            for (let j = row; j > i; j--) {
-                document.write("&nbsp;&nbsp;");
-            }
-            for (let k = 1; k <= row; k++) {
-                document.write("*&nbsp;");
-            }
-            document.write("<br>");
-        }
-    }
-
-    function drawDiamond(row) {
-        document.write("<h2>菱形</h2>");
-        for (let i = 1; i <= row; i++) {
-            for (let j = row; j > i; j--) {
-                document.write("&nbsp;&nbsp;");
-            }
-            for (let k = 1; k <= i * 2 - 1; k++) {
-                document.write("*&nbsp;");
-            }
-            document.write("<br>");
-        }
-        for (let i = row - 1; i >= 1; i--) {
-            for (let j = row - 1; j >= i; j--) {
-                document.write("&nbsp;&nbsp;");
-            }
-            for (let k = 1; k <= i * 2 - 1; k++) {
-                document.write("*&nbsp;");
-            }
-            document.write("<br>");
-        }
-    }
-
-    var triangleRow = prompt("请输入三角形的行数");
-    var parallelogramRow = prompt("请输入平行四边形的行数");
-    var diamondRow = prompt("请输入菱形的行数");
-
-    drawTriangle(triangleRow);
-    drawParallelogram(parallelogramRow);
-    drawDiamond(diamondRow);
-</script>
+  <header>
+    <h1>我的作业</h1>
+  </header>
+  <div class="container">
+    <div class="homework-item">
+      <h2>作业标题</h2>
+      <p>作业描述：这里是作业的描述内容。</p>
+      <p>截止日期：2024年6月20日</p>
+      <a href="#">查看详情</a>
+    </div>
+    <!-- 在这里添加更多作业项目 -->
+  </div>
 </body>
 </html>
