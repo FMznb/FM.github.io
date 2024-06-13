@@ -1,57 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shapes</title>
+    <meta charset="UTF-8">
+    <title>图形打印</title>
 </head>
-<!-- 219970706付洺 -->
 <body>
-	
+<!--219970706 付洺-->
 <script>
-    // 生成三角形的函数
-    function generateTriangle(rows) {
-      let triangle = '';
-      for (let i = 1; i <= rows; i++) {
-        // 添加空格以使三角形居中
-        for (let j = 1; j <= rows - i; j++) {
-          triangle += ' ';
+    function drawTriangle(row) {
+        document.write("<h2>三角形</h2>");
+        for (let i = 1; i <= row; i++) {
+            for (let a = row; a > i; a--) {
+                document.write("&nbsp;");
+            }
+            for (let j = 1; j <= i * 2 - 1; j++) {
+                document.write("*");
+            }
+            document.write("<br>");
         }
-        // 添加星号
-        for (let k = 1; k <= i * 2 - 1; k++) {
-          triangle += '*';
-        }
-        triangle += '\n';
-      }
-      return triangle;
     }
 
-  // 生成平行四边形的函数
-  function generateParallelogram(rows) {
-    let parallelogram = '';
-    for (let i = 1; i <= rows; i++) {
-      // 添加空格以使平行四边形向右偏移
-      for (let j = 1; j < i; j++) {
-        parallelogram += '&nbsp;';
-      }
-      // 添加星号
-      for (let k = 1; k <= rows; k++) {
-        parallelogram += '*';
-      }
-      parallelogram += '<br>';
+    function drawParallelogram(row) {
+        document.write("<h2>平行四边形</h2>");
+        for (let i = 1; i <= row; i++) {
+            for (let j = row; j > i; j--) {
+                document.write("&nbsp;&nbsp;");
+            }
+            for (let k = 1; k <= row; k++) {
+                document.write("*&nbsp;");
+            }
+            document.write("<br>");
+        }
     }
-    return parallelogram;
-  }
 
+    function drawDiamond(row) {
+        document.write("<h2>菱形</h2>");
+        for (let i = 1; i <= row; i++) {
+            for (let j = row; j > i; j--) {
+                document.write("&nbsp;&nbsp;");
+            }
+            for (let k = 1; k <= i * 2 - 1; k++) {
+                document.write("*&nbsp;");
+            }
+            document.write("<br>");
+        }
+        for (let i = row - 1; i >= 1; i--) {
+            for (let j = row - 1; j >= i; j--) {
+                document.write("&nbsp;&nbsp;");
+            }
+            for (let k = 1; k <= i * 2 - 1; k++) {
+                document.write("*&nbsp;");
+            }
+            document.write("<br>");
+        }
+    }
 
-  // 输出到页面
-  document.write('<h3>Triangle:</h3>');
-  document.write('<pre>' + generateTriangle(5) + '</pre>');
+    var triangleRow = prompt("请输入三角形的行数");
+    var parallelogramRow = prompt("请输入平行四边形的行数");
+    var diamondRow = prompt("请输入菱形的行数");
 
-  document.write('<h3>Parallelogram:</h3>');
-  document.write('<pre>' + generateParallelogram(5) + '</pre>');
-
+    drawTriangle(triangleRow);
+    drawParallelogram(parallelogramRow);
+    drawDiamond(diamondRow);
 </script>
-
 </body>
-<ml>
+</html>
