@@ -18,31 +18,31 @@
 		<div id="cont_left">
 			<ul><img src="img/fold.gif"><a onclick="show('menu1')"> 通过DOM获取信息 </a>
 				<ul id="menu1">
-					<li onclick="showImg()"><img src="img/doc.gif">获取原始图片路径</li>
-					<li onclick="getFruit()"><img src="img/doc.gif">获取我喜欢的水果</li>
+					<li onclick="showImg()"><img src="图片/doc.gif">获取原始图片路径</li>
+					<li onclick="getFruit()"><img src="图片/doc.gif">获取我喜欢的水果</li>
 				</ul>
 			</ul>
 
 			<ul><img src="img/fold.gif"><a onclick="show('menu2')"> 通过DOM操作元素 </a>
 				<ul id="menu2">
-					<li onclick="createImg()"><img src="img/doc.gif">创建图片</li>
-					<li onclick="cloneImg()"><img src="img/doc.gif">克隆图片</li>
-					<li onclick="changeImg()"><img src="img/doc.gif">改变图片</li>
-					<li onclick="removeImg()"><img src="img/doc.gif">删除图片</li>
+					<li onclick="createImg()"><img src="图片/doc.gif">创建图片</li>
+					<li onclick="cloneImg()"><img src="图片/doc.gif">克隆图片</li>
+					<li onclick="changeImg()"><img src="图片/doc.gif">改变图片</li>
+					<li onclick="removeImg()"><img src="图片/doc.gif">删除图片</li>
 				</ul>
 			</ul>
 
 			<ul><img src="img/fold.gif"><a onclick="show('menu3')"> 通过DOM操作样式 </a>
 				<ul id="menu3">
-					<li onclick="changeCss1()"><img src="img/doc.gif">为原始图片加上行间样式</li>
-					<li onclick="changeCss2()"><img src="img/doc.gif">为所有的fieldset加上内部样式</li>
+					<li onclick="changeCss1()"><img src="图片/doc.gif">为原始图片加上行间样式</li>
+					<li onclick="changeCss2()"><img src="图片/doc.gif">为所有的fieldset加上内部样式</li>
 				</ul>
 			</ul>
 
 		</div>
 		<fieldset>
 			<legend>原始图片</legend>
-			<img id="fruit" src="img/fruit.jpg">
+			<img id="fruit" src="图片/fruit.jpg">
 		</fieldset>
 		<fieldset>
 			<legend>图片路径</legend>
@@ -153,9 +153,9 @@
 			//219970706付洺
 			// 创建图片
 			function createImg() {
-			    let img = document.createElement("img");
-			    img.src = "img/fruit.jpg";
-			    document.getElementById("msg3").appendChild(img);
+			    let img = document.createElement("图片");
+			    img.src = "图片/fruit.jpg";
+			    document.getElementById("msg3").appendChild(图片);
 			}
 			
 			// 克隆图片
@@ -167,7 +167,7 @@
 			
 			// 改变图片
 			function changeImg() {
-			    document.getElementById("fruit").src = "img/new_fruit.jpg";
+			    document.getElementById("fruit").src = "图片/new_fruit.jpg";
 			}
 			
 			// 删除图片
