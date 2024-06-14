@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>检查用户名是否存在</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<!-- 219970706付洺 -->
+<form id="usernameForm">
+  <label for="username">用户名:</label>
+  <input type="text" id="username" name="username">
+  <input type="button" value="检查用户名" onclick="checkUsername()">
+</form>
+
+<div id="result"></div>
+
+<script>
+function checkUsername() {
+  var username = $("#username").val();
+  
+  $.ajax({
+    url: "check_username.php", // 后端处理代码的URL
+    method: "POST",
+    data: { username: username },
+    success: function(response) {
+      $("#result").html(response);
+    },
+    error: function() {
+      $("#result").html("发生错误，请重试。");
+    }
+  });
+}
+</script>
+
+</body>
+</html>
