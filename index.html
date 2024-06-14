@@ -5,36 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>我的作业</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    /* Reset default margin and padding */
+    body, h1, h2, p {
       margin: 0;
       padding: 0;
     }
+    
+    /* Set a background color and font for the body */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+    
+    /* Style the header */
     header {
       background-color: #333;
       color: #fff;
       padding: 20px;
       text-align: center;
     }
-    h1 {
-      margin: 0;
-    }
+    
+    /* Style the main container */
     .container {
       max-width: 800px;
       margin: 20px auto;
       padding: 0 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
+    
+    /* Style each homework item */
     .homework-item {
       border: 1px solid #ddd;
       border-radius: 5px;
-      padding: 20px;
       margin-bottom: 20px;
+      padding: 20px;
+      background-color: #fff;
     }
+    
+    /* Style headings and paragraphs within homework items */
     .homework-item h2 {
       margin-top: 0;
+      color: #333;
     }
+    
     .homework-item p {
       margin-bottom: 10px;
+      color: #666;
+    }
+    
+    /* Style links within homework items */
+    .homework-item a {
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      padding: 6px 12px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .homework-item a:hover {
+      background-color: #555;
     }
   </style>
 </head>
@@ -46,7 +81,6 @@
     <div class="homework-item">
       <h2>作业标题</h2>
       <p>作业描述：这里是作业的描述内容。</p>
-      <p>截止日期：2024年6月20日</p>
       <a href="练习一.html">练习一</a>
       <a href="练习二.html">练习二</a>
       <a href="练习三.html">练习三</a>
@@ -57,7 +91,7 @@
       <a href="实验四.html">实验四</a>
       <a href="实验五.html">实验五</a>
     </div>
-    <!-- 在这里添加更多作业项目 -->
+    <!-- Add more homework items as needed -->
   </div>
 </body>
 </html>
